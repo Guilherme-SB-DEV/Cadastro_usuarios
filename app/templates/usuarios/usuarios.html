@@ -1,0 +1,27 @@
+{% extends 'usuarios/base.html'%}
+{% block conteudo %}
+<style>
+    nav{
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.262);
+    height: 50px;
+    margin-bottom: 25px;
+}
+</style>
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.id_usuario}}</td>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.idade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
